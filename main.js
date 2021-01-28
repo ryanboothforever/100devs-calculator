@@ -40,13 +40,9 @@ function Calculator(){
         }
         outcome.innerHTML = result
     }
-    this.clearDisplay = function(){
-        document.querySelector("#beep").innerHTML = ""
-    }
-    const numbers = document.getElementsByTagName("span");
-    Array.from(numbers).forEach(elements => elements.addEventListener("click", addToDisplay))
 
-    document.querySelector("#clear").addEventListener("click", clearDisplay)
+    const numbers = document.getElementsByClassName(".number");
+    Array.from(numbers).forEach(elements => elements.addEventListener("click", addToDisplay))
 }
 // const numbers = document.getElementsByTagName("span");
 // Array.from(numbers).forEach(elements => elements.addEventListener("click", addToDisplay))
